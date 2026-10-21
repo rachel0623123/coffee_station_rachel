@@ -1,7 +1,15 @@
+import BadgeSection from "./section/BadgeSection"
+import ButtonSection from "./section/ButtonSection"
+import ColorSection from "./section/ColorSection"
+import CardSection from "./section/CardSection"
+
 export const DesignSystem =  () =>  {
     return (
-        <main>
-            this is designSystem page!
-        </main>
+        <div className="designPage">
+            <ColorSection />
+            <ButtonSection />
+            <BadgeSection />
+            <CardSection />
+        </div>
     )
 }

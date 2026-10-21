@@ -1,6 +1,6 @@
 function ColorBox ({color}: {color: string}){
     return (
-         <div className={`text-subtitle color-box ${color}`}></div>
+         <div className={`color-box ${color}`}></div>
     )
 
 }
