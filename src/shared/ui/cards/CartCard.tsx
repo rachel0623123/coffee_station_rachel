@@ -3,7 +3,7 @@ import { FaMinus  } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import IconButton from "../buttons/IconButton";
 
-type cartCardProps = {
+type CartCardProps = {
     price: string;
     image: string;
     cart_name: string;
@@ -14,7 +14,7 @@ function CartCard({
     image,
     cart_name,
     count
-}:cartCardProps) {
+}:CartCardProps) {
     return (
        <div className="glass shadow-2xl p-4 rounded-xl flex gap-4 items-center w-96">
             <img alt={cart_name} className="w-20 h-20 rounded-lg object-cover" src={image} />
