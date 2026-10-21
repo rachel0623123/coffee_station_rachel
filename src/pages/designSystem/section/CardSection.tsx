@@ -26,7 +26,7 @@ function CardSection()  {
 
                 <div>
                     <SlideCard alt="Image" image = {imageSrc} />
-                    <p className="mt-2 text-center">ImageCard.imageCard</p>
+                    <p className="mt-2 text-center">SlideCard</p>
                 </div>
                 <div>
                     <ImageCard alt="Image" image = {staffSrc} cardType="staffCard"  variant= "rounded-full"/>

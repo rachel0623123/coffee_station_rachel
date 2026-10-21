@@ -12,10 +12,11 @@ const colorList = [
     "bg-coffee-800",
     "bg-coffee-900",
     "bg-coffee-950",
+    "bg-soft-coffee",
     "bg-primary",
     "bg-cream",
     "bg-beige",
-    "bg-terracotta"
+    "bg-terracotta",
 ];
 
 function ColorSection () {

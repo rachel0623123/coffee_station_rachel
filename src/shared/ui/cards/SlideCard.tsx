@@ -1,4 +1,4 @@
-type ImageCardProps = {
+type SlideCardProps = {
   alt: string;
   image: string;
 };
@@ -6,7 +6,7 @@ type ImageCardProps = {
 function SlideCard ({
     alt,
     image,
-}: ImageCardProps){
+}: SlideCardProps){
     return (
         <div className="slideCard">
             <img alt={alt} className={`w-full h-full object-cover h-[220px] hover:scale-110 transition-transform duration-700 ease-out`} src = {image} />
