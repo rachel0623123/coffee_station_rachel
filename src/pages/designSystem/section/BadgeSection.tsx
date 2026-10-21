@@ -1,6 +1,6 @@
-import LabelBadge from "../../../components/badges/LabelBadge";
-import IconBadge from "../../../components/badges/IconBadge";
-import CountBadge from "../../../components/badges/CountBadge";
+import LabelBadge from "../../../shared/ui/badges/LabelBadge";
+import IconBadge from "../../../shared/ui/badges/IconBadge";
+import CountBadge from "../../../shared/ui/badges/CountBadge";
 import { GoStarFill } from "react-icons/go";
 import { LuSparkles } from "react-icons/lu";
 function BadgeSection () {

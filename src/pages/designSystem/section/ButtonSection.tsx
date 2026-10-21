@@ -1,8 +1,7 @@
-// import IconBtn from "../components/buttons/IconBtn";
-import Button from "../../../components/buttons/Button";
-import Chip from "../../../components/buttons/Chip";
-import TimeSlot from "../../../components/buttons/TimeSlot";
-import IconButton from "../../../components/buttons/IconButton";
+import Button from "../../../shared/ui/buttons/Button";
+import Chip from "../../../shared/ui/buttons/Chip";
+import TimeSlot from "../../../shared/ui/buttons/TimeSlot";
+import IconButton from "../../../shared/ui/buttons/IconButton";
 import { BsHandbag  } from "react-icons/bs";
 import { FaPlus } from "react-icons/fa6";
 function ButtonSection () {
@@ -24,11 +23,11 @@ function ButtonSection () {
                     <p className="mt-2 text-center">Button.bookBtn</p>
                 </div>
                 <div>
-                     <IconButton content="" variant="" hrefC="#" icon={BsHandbag }/>
+                     <IconButton content="" variant="hover:bg-coffee-900/20" icon={BsHandbag }/>
                     <p className="mt-2 text-center">IconButton</p>
                 </div>
                 <div>
-                    <IconButton content="Add to Order" variant="hover:bg-coffee-900 text-coffee-900 hover:text-white rounded-2xl" hrefC="#" icon={FaPlus }/>
+                    <IconButton content="Add to Order" variant="hover:bg-coffee-900 text-coffee-900 hover:text-white rounded-2xl" icon={FaPlus }/>
                     <p className="mt-2 text-center">IconButton</p>
                 </div>
                 <div>

@@ -1,4 +1,4 @@
-import ColorBox from "../../../components/colorBox/ColorBox";
+import ColorBox from "../../../shared/ui/colorBox/ColorBox";
 
 const colorList = [
     "bg-coffee-50",
