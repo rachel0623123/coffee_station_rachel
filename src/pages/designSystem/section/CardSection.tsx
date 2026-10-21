@@ -4,6 +4,7 @@ import ProductCard from "../../../shared/ui/cards/ProductCard"
 import TestimonialCard from "../../../shared/ui/cards/TestimonialCard";
 import ContactCard from "../../../shared/ui/cards/ContactCard";
 import CartCard from "../../../shared/ui/cards/CartCard";
+import SlideCard from "../../../shared/ui/cards/SlideCard";
 
 import proImageSrc from "../../../assets/images/products/photo-1525351484163-7529414344d8.avif"
 import imageSrc from "../../../assets/images/ambience/photo-1442512595331-e89e73853f31.avif";
@@ -24,7 +25,7 @@ function CardSection()  {
                 </div>
 
                 <div>
-                    <ImageCard alt="Image" image = {imageSrc} cardType="imageCard"  variant= "rounded-2xl"/>
+                    <SlideCard alt="Image" image = {imageSrc} />
                     <p className="mt-2 text-center">ImageCard.imageCard</p>
                 </div>
                 <div>

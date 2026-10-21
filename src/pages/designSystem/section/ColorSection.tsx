@@ -12,17 +12,25 @@ const colorList = [
     "bg-coffee-800",
     "bg-coffee-900",
     "bg-coffee-950",
+    "bg-primary",
+    "bg-cream",
+    "bg-beige",
+    "bg-terracotta"
 ];
 
 function ColorSection () {
     return (
         <div className="section">
             <h1>COLORS</h1>
-            <div className="sectionContent"> 
+            <div className="flex flex-wrap bg-coffee-300 py-3 px-10"> 
                 {
                     colorList.map((item, index) => {
                         return (
-                            <ColorBox key={index} color={item}/>   
+                            <div className="flex flex-col justify-center items-center w-32">
+                                <ColorBox key={index} color={item}/>   
+                                <p className="text-center">{item}</p>
+                            </div>
+                            
                         );
                     })
                 }
