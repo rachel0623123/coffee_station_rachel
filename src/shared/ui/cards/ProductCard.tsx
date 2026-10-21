@@ -4,7 +4,7 @@ import IconButton from "../buttons/IconButton";
 import { GoStarFill } from "react-icons/go";
 import { FaPlus } from "react-icons/fa6";
 
-type productCardProps = {
+type ProductCardProps = {
     badge_content: string;
     badge_price: string;
     image: string;
@@ -20,7 +20,7 @@ function ProductCard ( {
     badge_star,
     product_name,
     product_content,
-}:productCardProps){
+}:ProductCardProps){
     return (
         <div className="productCard group">
             <div className="relative h-56 overflow-hidden group">
