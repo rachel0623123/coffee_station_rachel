@@ -27,8 +27,8 @@ function ColorSection () {
                 {
                     colorList.map((item, index) => {
                         return (
-                            <div className="flex flex-col justify-center items-center w-32">
-                                <ColorBox key={index} color={item}/>   
+                            <div key={index}  className="flex flex-col justify-center items-center w-32">
+                                <ColorBox color={item}/>   
                                 <p className="text-center">{item}</p>
                             </div>
                             

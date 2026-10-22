@@ -25,7 +25,7 @@ function BadgeSection () {
                     <p className="mt-2 text-center">IconBadge.glass</p>
                 </div>
                 <div className="relative">
-                    <CountBadge count = "2"/>
+                    <CountBadge variant="" count = "2"/>
                     <p className="mt-2 text-center">CountBadge</p>
                 </div>
             </div>
