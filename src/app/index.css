@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer components {
-    .designPage{
-        @apply  w-full bg-coffee-50 flex flex-col justify-center items-center px-5 py-5
+    .mainSection {
+        @apply  w-full bg-coffee-300 px-5 py-28 flex flex-col justify-center items-center
     }
-    .color-box {
+   .colorBox {
         @apply rounded-full px-5 py-5 border border-white w-10 h-10
    }
     .section{
-        @apply rounded-md w-[90%] py-5 px-10  shadow-xl bg-white my-3
+        @apply rounded-md w-[90%] py-5 px-10  shadow-xl my-3 bg-coffee-100
     }
     .sectionContent {
         @apply rounded-sm flex flex-wrap justify-between items-center w-full py-3 px-10 border-gray-100 border-[2px] 
@@ -88,5 +88,14 @@
     }
     .mapCard {
         @apply rounded-3xl outline-white
+    }
+    .navBar{
+        @apply fixed top-4 z-50 left-1/2 -translate-x-1/2 w-[94%] max-w-5xl py-2 px-8 rounded-[28px] border border-white/20 shadow-2xl transition-all duration-500 backdrop-blur-lg ease-in-out flex items-center justify-between bg-coffee-200/30
+    }
+    .navItem {
+        @apply text-sm font-bold tracking-widest transition-all duration-300 relative uppercase text-coffee-900/50 hover:text-coffee-900
+    }
+    .selectNav{
+        @apply text-coffee-950
     }
 }
