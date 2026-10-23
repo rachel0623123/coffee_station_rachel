@@ -49,7 +49,7 @@ export const Footer = () => {
                     <p className="text-coffee-100/60 text-sm mb-6 font-medium">Subscribe for secret menu previews and brewing tips.</p>
                     <div className="flex gap-3">
                         <input type="email" placeholder="Your email" className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-terracotta w-full" aria-label="Email"/>
-                        <Button content = "Host" variant ="bg-white/5 border border-white/10 rounded-xl px-3 text-sm py-1"/>
+                        <Button content = "Join" variant ="bg-white/5 border border-white/10 rounded-xl px-3 text-sm py-1"/>
                     </div>
                 </div>
             </div>

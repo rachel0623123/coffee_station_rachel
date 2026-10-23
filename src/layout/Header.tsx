@@ -2,6 +2,7 @@ import IconButton from "../shared/ui/buttons/IconButton";
 import CountBadge from "../shared/ui/badges/CountBadge";
 import Button from "../shared/ui/buttons/Button";
 import NavItem from "../shared/ui/NavItem";
+import { useNavigate } from "react-router-dom";
 
 import { navLinks } from "./navLinks";
 
@@ -10,6 +11,7 @@ import { FiShoppingBag } from "react-icons/fi";
 import { LuCoffee } from "react-icons/lu";
 
 export const Header = () => {
+    const navigate = useNavigate();
     return (
         <nav className="navBar">
             <Link className="flex items-center gap-1 text-xl sm:text-2xl font-bold text-coffee-900 tracking-tight shrink-0 z-20 font-serif group" to="/">
@@ -30,7 +32,7 @@ export const Header = () => {
                     <IconButton content="" variant="text-[15px] hover:bg-white/20 " icon={FiShoppingBag  }/>
                     <CountBadge variant="absolute -top-1 left-4" count="2"/>
                 </div>
-                <Button content = "Reserve" variant ="orderBtn py-3 rounded-2xl"/>
+                <Button content = "Reserve" variant ="orderBtn py-3 rounded-2xl" onClick = {() => navigate("/booking")}/>
             </div>
         </nav>
     );
