@@ -1,6 +1,6 @@
 function ColorBox ({color}: {color: string}){
     return (
-         <div className={`color-box ${color}`}></div>
+         <div className={`colorBox ${color}`}></div>
     )
 
 }

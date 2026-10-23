@@ -1,7 +1,9 @@
-export const Product = () => {
+function Product() {
     return (
-        <main>
-            this is product page!
+        <main className="mainSection">
+            Product
         </main>
-    );
+    )
 }
+
+export default Product;

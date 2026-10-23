@@ -3,13 +3,15 @@ import ButtonSection from "./section/ButtonSection"
 import ColorSection from "./section/ColorSection"
 import CardSection from "./section/CardSection"
 
-export const DesignSystem =  () =>  {
+function DesignSystem() {
     return (
-        <div className="designPage">
+        <main className="mainSection">
             <ColorSection />
             <ButtonSection />
             <BadgeSection />
             <CardSection />
-        </div>
+        </main>
     )
 }
+
+export default DesignSystem;

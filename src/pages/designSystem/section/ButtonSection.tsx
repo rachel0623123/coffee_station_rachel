@@ -23,7 +23,7 @@ function ButtonSection () {
                     <p className="mt-2 text-center">Button.bookBtn</p>
                 </div>
                 <div>
-                     <IconButton content="" variant="hover:bg-coffee-900/20" icon={BsHandbag }/>
+                     <IconButton content="" variant="hover:bg-coffee-900/20 w-full" icon={BsHandbag }/>
                     <p className="mt-2 text-center">IconButton</p>
                 </div>
                 <div>
