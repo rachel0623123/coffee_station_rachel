@@ -32,7 +32,7 @@ export const Header = () => {
                     <IconButton content="" variant="text-[15px] hover:bg-white/20 " icon={FiShoppingBag  }/>
                     <CountBadge variant="absolute -top-1 left-4" count="2"/>
                 </div>
-                <Button content = "Reserve" variant ="orderBtn py-3 rounded-2xl" onClick = {() => navigate("/booking")}/>
+                <Button content = "Reserve" variant ="orderBtn py-3 px-6 rounded-2xl text-sm tracking-widest" onClick = {() => navigate("/booking")}/>
             </div>
         </nav>
     );

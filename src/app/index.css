@@ -3,35 +3,43 @@
 @tailwind utilities;
 
 @layer components {
+    body {
+    @apply bg-cream text-coffee-900 font-sans antialiased overflow-x-hidden;
+        background:
+        radial-gradient(circle at top left, rgba(230, 220, 207, 0.5), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(209, 96, 61, 0.05), transparent 40%),
+        linear-gradient(135deg, #f5e6d3 0%, #e6c9a8 50%, #d7b899 100%);
+        min-height: 100vh;
+        position: relative;
+    }
     .mainSection {
-        @apply  w-full bg-coffee-300 px-5 py-28 flex flex-col justify-center items-center
+        @apply  w-full px-5 pt-40 flex flex-col justify-center items-center
     }
    .colorBox {
         @apply rounded-full px-5 py-5 border border-white w-10 h-10
    }
     .section{
-        @apply rounded-md w-[90%] py-5 px-10  shadow-xl my-3 bg-coffee-100
+        @apply rounded-md w-[90%] shadow-xl my-3 bg-coffee-100
     }
     .sectionContent {
-        @apply rounded-sm flex flex-wrap justify-between items-center w-full py-3 px-10 border-gray-100 border-[2px] 
-        bg-coffee-300
+        @apply rounded-sm flex flex-wrap justify-between items-center w-full py-3 px-10 border-gray-100 border-[2px] bg-coffee-300
       
     }
     .testimonialCard{
-        @apply min-w-[280px] p-6 w-[400px] h-[200px] rounded-[24px] relative border border-white/30 hover:bg-white/10 transition-colors pointer-events-none select-none relative
+        @apply p-6 w-96 h-60 rounded-[24px] relative border border-white/30 bg-white/10 transition-colors pointer-events-none select-none relative  font-sans shadow-2xl
     }
     .quateMark{
         @apply absolute -top-5 left-6 bg-coffee-800 rounded-full p-2.5  shadow-lg  text-white
     }
 
     .button {
-        @apply px-8 py-3 font-bold text-base hover:shadow-2xl transition-all rounded-full 
+        @apply px-6 py-1 font-bold hover:shadow-2xl transition-all rounded-full text-xl
     }
     .iconButton{
         @apply p-2.5 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 flex items-center justify-center gap-2 text-sm
     }
     .chip{
-        @apply px-4 py-2 rounded-full text-xs font-bold transition-all duration-300  bg-transparent text-coffee-800 hover:bg-white/40 hover:text-coffee-900
+        @apply px-8 py-4 rounded-full text-sm font-bold transition-all duration-300  bg-transparent text-coffee-800 hover:bg-white/40 hover:text-coffee-900
     }
     .timeSlot{
         @apply px-5 py-2.5 rounded-xl text-xs font-medium transition-all border bg-white/40 text-coffee-900 border-white/40 hover:bg-white/50
@@ -39,7 +47,7 @@
     
     .selected{
         @apply bg-coffee-900 text-white hover:bg-coffee-900 hover:text-white
-    }
+    } 
     
     .orderBtn{
         @apply bg-coffee-900 text-white hover:bg-black py-4
@@ -72,13 +80,13 @@
         @apply w-5 h-5 bg-terracotta text-white text-sm font-bold rounded-lg flex items-center justify-center shadow-lg border-2 border-white/50
     }
     .productCard{
-        @apply rounded-[32px] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-white/20 opacity-100 relative w-72 shadow-xl
+        @apply rounded-[32px] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-white/20 opacity-100 relative  shadow-xl
     }
     .card{
         @apply shrink-0 glass outline outline-8 shadow-xl relative overflow-hidden
     }
     .slideCard {
-        @apply  w-[180px]  h-[220px] rounded-2xl outline-white/20 hover:scale-110 transition-transform duration-700 ease-out shrink-0 glass outline outline-8 shadow-xl relative overflow-hidden rounded-2xl overflow-hidden
+        @apply  w-[350px]  h-[440px] rounded-2xl outline-white/20 hover:scale-110 transition-transform duration-700 ease-out shrink-0 glass outline outline-8 shadow-xl relative overflow-hidden rounded-2xl overflow-hidden
     }
     .staffCard{
         @apply  w-[200px] h-[200px] rounded-full outline-white
@@ -97,5 +105,14 @@
     }
     .selectNav{
         @apply text-coffee-950
+    }
+    .sectionHeader{
+        @apply text-6xl font-serif font-bold text-coffee-900
+    }
+    .sectionText{
+        @apply text-coffee-800/80 max-w-2xl mx-auto text-base sm:text-lg font-medium
+    }
+    .pageHeader{
+         @apply text-7xl font-serif font-bold text-coffee-900 font-bold mb-5
     }
 }
