@@ -9,6 +9,7 @@ function TopSelling(){
 
     const coffees = useCoffeeStore((state) => state.coffees);
     const topCoffees = coffees.filter((coffee) => coffee.star >= 4.9);
+    const addCartItem = useCoffeeStore((state) => state.addCartItem);
     return (
         <section id="top-selling" className="relative flex flex-col items-center justify-center pt-32 ">
             <div className="w-full max-w-[1536px] pb-20">
@@ -20,11 +21,12 @@ function TopSelling(){
                     {topCoffees.map((coffee) => (
                             <ProductCard 
                                 key={coffee.id}
-                                badge_price = {`$ ${coffee.price.toFixed(1)}`} 
+                                badge_price = {coffee.price} 
                                 image = {coffee.image} 
-                                badge_star = {`${coffee.star.toFixed(1)}`} 
+                                badge_star = {coffee.star}
                                 product_name = {coffee.name} 
                                 product_content = {coffee.content}
+                                onClick={() => addCartItem(coffee.id)}
                             />    
                     ))}
             
