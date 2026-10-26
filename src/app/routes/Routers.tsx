@@ -3,7 +3,7 @@ import { Layout } from "../../layout/Layout";
 
 import DesignSystem from "../../pages/designSystem/DesignSystem";
 import Home from "../../pages/homePage/Home";
-import Product from "../../pages/Product";
+import Product from "../../pages/productPage/Product";
 import About from "../../pages/About";
 import Contact from "../../pages/Contact";
 import Booking from "../../pages/Booking";
