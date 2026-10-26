@@ -29,7 +29,7 @@ function CardSection()  {
                     <p className="mt-2 text-center">SlideCard</p>
                 </div>
                 <div>
-                    <ImageCard alt="Image" image = {staffSrc} cardType="staffCard"  variant= "rounded-full"/>
+                    <ImageCard alt="Image" image = {staffSrc} cardType="staffCard" name="Linda" role="Manager"  variant= "rounded-full"/>
                     <p className="mt-2 text-center">ImageCard.staffCard</p>
                 </div>
 
