@@ -20,7 +20,7 @@ function CardSection()  {
             <h1>CARDS</h1>
             <div className="sectionContent">
                 <div>
-                    <ProductCard  badge_content="best seller" badge_price="$5.50" image={proImageSrc} badge_star="4.6" product_name="Macchiato" product_content="Espresso with vanilla syrup, milk, and caramel drizzle."/>
+                    <ProductCard badge_price="$5.50" image={proImageSrc} badge_star="4.6" product_name="Macchiato" product_content="Espresso with vanilla syrup, milk, and caramel drizzle."/>
                     <p className="mt-2 text-center">ProductCard</p>
                 </div>
 

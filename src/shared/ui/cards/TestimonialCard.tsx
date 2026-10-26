@@ -15,7 +15,7 @@ function TestimonialCard({
   return (
     <div className="testimonialCard">
         <div className="quateMark"><FaQuoteRight /></div>
-        <p className="text-coffee-900/90 italic mb-5 mt-3 leading-relaxed font-medium text-base text-[18px]">{quote}</p>
+        <p className="text-coffee-900/90 italic mb-5 mt-3 leading-relaxed font-medium  text-xl">{quote}</p>
 
         <div className="flex items-center gap-4">
             <img
