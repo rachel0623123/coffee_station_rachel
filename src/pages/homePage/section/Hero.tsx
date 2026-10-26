@@ -43,7 +43,7 @@ function Hero(){
     return (       
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" onMouseMove={handleMouseMove}>
             <div className="mx-auto px-20 relative z-10 grid grid-cols-2 gap-8 items-center max-w-6xl">
-                <motion.div style={{ y: y1 }}  className="text-left space-y-8 relative z-20">
+                <motion.div style={{y: y1 }}  className="text-left space-y-8 relative z-20">
                     <motion.h1 
                         variants={sentence}
                         initial="hidden"
@@ -74,13 +74,13 @@ function Hero(){
                     </motion.div>
                 </motion.div>
 
-                <motion.div className="relative h-[350px] flex items-center justify-center">
-                     <motion.div
+                <motion.div className="relative h-[350px] flex items-center justify-center" style={{x}}>
+                     <motion.div 
                         animate={{ rotate: 360 }}
                         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                         className="absolute w-[500px] h-[500px] border border-white/10 rounded-full hidden"
                     />
-                    <motion.div
+                    <motion.div 
                         animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
                         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                         className="glass absolute w-[380px] h-[480px] rounded-[50px] z-0 -rotate-6 border-l border-white/40 shadow-2xl"

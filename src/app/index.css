@@ -19,7 +19,7 @@
         @apply rounded-full px-5 py-5 border border-white w-10 h-10
    }
     .section{
-        @apply rounded-md w-[90%] shadow-xl my-3 bg-coffee-100
+        @apply rounded-md w-[90%] shadow-xl my-3 bg-coffee-100 p-5 pt-9
     }
     .sectionContent {
         @apply rounded-sm flex flex-wrap justify-between items-center w-full py-3 px-10 border-gray-100 border-[2px] bg-coffee-300
