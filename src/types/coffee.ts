@@ -21,6 +21,15 @@ export interface TestimonialData {
   role: string;
   avatar: string;
 }
+
+export interface Staff {
+  id: number;
+  alt: string;
+  name: string;
+  role: string;
+  image: string;
+}
+
 export interface CartItem {
   id: number;
   quantity: number;
