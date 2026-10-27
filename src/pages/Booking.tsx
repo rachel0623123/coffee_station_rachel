@@ -13,13 +13,19 @@ const timeSlot = [
 function Booking() {
     const [selectedSlot, setSelectedSlot] = useState("");
     const [isConfirmed, setIsConfirmed] = useState(false);
-
+    const [name, setName] = useState("");
+    const [date, setDate] = useState("");
+    const [guests, setGuests] = useState("2");
+    const [error, setError] = useState("");
+    const today = new Date().toLocaleDateString("en-CA");
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!selectedSlot) {
-            return;
-        }
+        if (!name.trim()) { setError("Please enter your name."); return; }
+        if (!date || date < today) { setError("Please choose today or a later date."); return; }
+        if (!selectedSlot) { setError("Please choose a time slot."); return; }
+        setError("");
         setIsConfirmed(true);
+
     }
     return (
         <main className="mainSection min-h-screen pb-10">
@@ -44,20 +50,20 @@ function Booking() {
                         (<div className="h-full flex flex-col items-center justify-center text-center gap-4">
                             <LuCheck className="bg-green-500 w-20 h-20 rounded-full text-white p-3" />
                             <h2 className="text-3xl font-serif font-bold text-coffee-900">Reservation confirmed</h2>
-                            <p>We'll see you at {selectedSlot}.</p>
+                            <p>Thanks, {name}! A table for {guests} on {date} at {selectedSlot}.</p>
                             <Button
                                 content="Make another reservation"
                                 variant="orderBtn rounded-xl"
                                 type="button"
-                                onClick={() => { setIsConfirmed(false); setSelectedSlot(""); }}
+                                onClick={() => { setIsConfirmed(false); setSelectedSlot(""); setName(""); setDate(""); setGuests("2");}}
                             />
                         </div>) 
-                        : ( <form onSubmit={handleSubmit} className="space-y-6 h-full flex flex-col justify-center">
+                        : ( <form onSubmit={handleSubmit} noValidate className="space-y-6 h-full flex flex-col justify-center">
                             <div className="flex flex-col space-y-2">
                                 <label htmlFor="name" className="labelText">Name</label>
                                 <div className="relative">
                                     <LuUserRound className="absolute text-xl text-coffee-800 top-5 left-4" />
-                                    <input type="text" id="name" placeholder="Example Name" className="inputForm" required />
+                                    <input type="text" id="name" placeholder="Example Name" className="inputForm" value={name} onChange={(e)=>setName(e.target.value)} required />
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
@@ -65,12 +71,12 @@ function Booking() {
                                     <label htmlFor="date" className="labelText">Date</label>
                                     <div className="relative">
                                         <LuCalendarDays className="absolute text-xl text-coffee-800 top-5 left-4" />
-                                        <input type="date" id="date" className="inputForm" required />
+                                        <input type="date" id="date" min={today} className="inputForm" value={date} onChange={(e)=>{setDate(e.target.value);}} required />
                                     </div>
                                 </div>
                                 <div className="flex flex-col space-y-2">
                                     <label htmlFor="guests" className="labelText">Guests</label>
-                                    <select id="guests" className="inputForm px-4">
+                                    <select id="guests" className="inputForm px-4" value={guests} onChange={(e) => setGuests(e.target.value)}>
                                         <option value="1">1 Person</option>
                                         <option value="2">2 People</option>
                                         <option value="3">3 People</option>
@@ -96,6 +102,7 @@ function Booking() {
                                 </div>
                             </div>
                             <Button content="Confirm Reservation" variant="orderBtn rounded-xl text-terracotta transition-all active:scale-[0.98]" type="submit" />
+                            {error && <p role="alert" className="text-sm text-red-600">{error}</p>}
                         </form>)
                     }
 
