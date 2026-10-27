@@ -24,7 +24,7 @@ function ProductCard ( {
     return (
         <div className="productCard group">
             <div className="relative h-72 overflow-hidden group">
-                <img alt={product_content} className="w-full h-full object-cover transform h-[220px] group-hover:scale-110 transition-transform duration-700 ease-out" src={image}  />
+                <img alt={product_name} className="w-full h-full object-cover transform h-[220px] group-hover:scale-110 transition-transform duration-700 ease-out" src={image}  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 {badge_star >= 4.9 && <LabelBadge content = "best seller" variant="solid absolute" />}
                 <LabelBadge content = {`$ ${badge_price.toFixed(2)}`} variant="dark absolute"/>
