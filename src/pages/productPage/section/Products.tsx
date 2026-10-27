@@ -8,7 +8,8 @@ type ProductsProps = {
 function Products({selectedCategory} : ProductsProps){
     const coffees = useCoffeeStore((state) => state.coffees);
     const showCoffees = selectedCategory === "All" ? coffees : coffees.filter((coffee) => coffee.category === selectedCategory);
- 
+    const addCartItem = useCoffeeStore((state) => state.addCartItem);
+    const openCartFunc =  useCoffeeStore((state) => state.openCart);
     return (
         <section className="relative flex flex-col items-center justify-center ">
             <div className="w-full max-w-[1536px] pb-20">
@@ -21,11 +22,12 @@ function Products({selectedCategory} : ProductsProps){
                             showCoffees.map((coffee) => (
                                 <ProductCard 
                                     key={coffee.id}
-                                    badge_price = {`$ ${coffee.price.toFixed(1)}`} 
+                                    badge_price = {coffee.price} 
                                     image = {coffee.image} 
-                                    badge_star = {`${coffee.star.toFixed(1)}`} 
+                                    badge_star = {coffee.star} 
                                     product_name = {coffee.name} 
                                     product_content = {coffee.content}
+                                    onClick={() => {addCartItem(coffee.id);openCartFunc();}}
                                 />  
                             )
                         ) 
