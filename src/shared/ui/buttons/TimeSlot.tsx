@@ -1,13 +1,15 @@
 type TimeSlotProps = {
   content: string;
   variant: string;
+  onClick?: () => void;
 };
 function TimeSlot ({
                 content,
                 variant,
+                onClick,
                 }: TimeSlotProps) {
     return (
-        <button className={`timeSlot ${variant}`}>{content}</button>
+        <button type="button" className={`timeSlot ${variant}`} onClick={onClick}>{content}</button>
     )
 
 }

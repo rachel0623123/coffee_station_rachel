@@ -42,9 +42,11 @@
         @apply px-8 py-4 rounded-full text-sm font-bold transition-all duration-300  bg-transparent text-coffee-800 hover:bg-white/40 hover:text-coffee-900
     }
     .timeSlot{
-        @apply px-5 py-2.5 rounded-xl text-xs font-medium transition-all border bg-white/40 text-coffee-900 border-white/40 hover:bg-white/50
+        @apply px-5 py-3 rounded-xl text-base font-medium transition-all border bg-white/40 text-coffee-900 border-white/40 hover:bg-white/50
     }
-    
+    .timeSlotSelected{
+        @apply text-white shadow-lg scale-105 bg-coffee-900 hover:bg-coffee-950
+    }
     .selected{
         @apply bg-coffee-900 text-white hover:bg-coffee-900 hover:text-white
     } 
@@ -114,5 +116,11 @@
     }
     .pageHeader{
          @apply text-7xl font-serif font-bold text-coffee-900 font-bold mb-5
+    }
+    .labelText {
+        @apply text-sm font-bold text-coffee-900 uppercase tracking-wide ml-2
+    }
+    .inputForm{
+        @apply w-full bg-white/40 border border-white/30 rounded-xl py-4 pl-12 pr-4 text-base text-coffee-900 placeholder:text-coffee-400/70 focus:bg-white/70 focus:ring-2 focus:ring-primary focus:outline-none transition-all
     }
 }
