@@ -2,12 +2,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialCard from "../../../shared/ui/cards/TestimonialCard";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { testimonials } from "../../../data/testimonials";
 import "swiper/css";
 
-import { useCoffeeStore } from "../../../store/coffeeStore";
-
 function Testimonials(){
-    const testimonials = useCoffeeStore((state) => state.testimonials);
     return (
         <section className="py-20 sm:py-32 relative overflow-hidden bg-coffee-500/10 flex flex-col items-center">
             <div className="text-center mb-10 sm:mb-16 flex flex-col items-center">
