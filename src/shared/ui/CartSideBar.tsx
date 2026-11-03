@@ -4,10 +4,11 @@ import IconButton from "./buttons/IconButton";
 import CartCard from "./cards/CartCard";
 import { useNavigate } from "react-router-dom";
 import { useCoffeeStore } from "../../store/coffeeStore";
+import { coffees } from "../../data/coffees";
+
 function CartSideBar() {
     const navigate = useNavigate();
     const cartItems = useCoffeeStore((state) => state.cart);
-    const coffees = useCoffeeStore((state) => state.coffees);
     const totalPrice = useCoffeeStore((state) =>
         state.cart.reduce((sum, item) => {
             const matchedCoffee = coffees.find((c) => item.id === c.id);

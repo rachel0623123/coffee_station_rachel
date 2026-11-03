@@ -1,14 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import SlideCard from "../../../shared/ui/cards/SlideCard";
-
+import { ambiences } from "../../../data/ambiences";
 import "swiper/css";
 import "swiper/css/free-mode";
 
-import { useCoffeeStore } from "../../../store/coffeeStore";
-
 function Ambience(){
-    const ambienceImages = useCoffeeStore((state) => state.ambiences);
     return (
         <section className="py-20 sm:py-32 relative overflow-hidden bg-white/5">
             <div className="text-center mb-10 sm:mb-16">
@@ -29,7 +26,7 @@ function Ambience(){
                     style={{ "--swiper-wrapper-transition-timing-function": "linear" } as React.CSSProperties}
                     className="py-8"
                 >
-                    {ambienceImages.map((item, index) => (
+                    {ambiences.map((item, index) => (
                     <SwiperSlide key={`${item.id}-${index}` } className="!w-auto !py-10 ml-5">
                         <SlideCard alt={item.alt} image={item.image} />
                     </SwiperSlide>

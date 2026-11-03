@@ -1,12 +1,12 @@
 import ProductCard from "../../../shared/ui/cards/ProductCard";
 import { useCoffeeStore } from "../../../store/coffeeStore";
+import { coffees } from "../../../data/coffees";
 
 type ProductsProps = {
     selectedCategory: string;
 };
 
 function Products({selectedCategory} : ProductsProps){
-    const coffees = useCoffeeStore((state) => state.coffees);
     const showCoffees = selectedCategory === "All" ? coffees : coffees.filter((coffee) => coffee.category === selectedCategory);
     const addCartItem = useCoffeeStore((state) => state.addCartItem);
     const openCartFunc =  useCoffeeStore((state) => state.openCart);

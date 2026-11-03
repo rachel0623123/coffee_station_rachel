@@ -2,12 +2,10 @@ import ProductCard from "../../../shared/ui/cards/ProductCard";
 import Button from "../../../shared/ui/buttons/Button";
 import { useNavigate } from "react-router-dom";
 import { useCoffeeStore } from "../../../store/coffeeStore";
+import { coffees } from "../../../data/coffees";
 
 function TopSelling(){
-
     const navigate = useNavigate();
-
-    const coffees = useCoffeeStore((state) => state.coffees);
     const topCoffees = coffees.filter((coffee) => coffee.star >= 4.9);
     const addCartItem = useCoffeeStore((state) => state.addCartItem);
     const openCartFunc =  useCoffeeStore((state) => state.openCart);

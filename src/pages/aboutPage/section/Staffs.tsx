@@ -1,10 +1,7 @@
 import ImageCard from "../../../shared/ui/cards/ImageCard";
-import { useCoffeeStore } from "../../../store/coffeeStore";
+import { staffs } from "../../../data/staffs";
 
 function Staffs() {
-
-    const staffs = useCoffeeStore((state) => state.staffs);
-
     return (
         <section className="w-full px-20 pb-32 space-y-6 sm:space-y-8">
             <div className="space-y-6 sm:space-y-8">
