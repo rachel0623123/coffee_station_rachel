@@ -35,7 +35,7 @@ export const Header = () => {
                 </div>
                 <div className="flex items-center gap-3 sm:gap-6 z-20">
                     <div className="relative hover:scale-110 transition-transform duration-700 ease-out">
-                        <IconButton content="" variant="text-[15px] hover:bg-white/20" icon={FiShoppingBag} onClick={openCartFunc}/>
+                        <IconButton content="" variant="text-[15px] hover:bg-white/20" icon={FiShoppingBag} onClick={openCartFunc} ariaLabel="Open cart"/>
                         {cartCount !== 0 && <CountBadge variant="absolute -top-1 left-4" count={String(cartCount)}/>}
                     </div>
                     <div className="hidden lg:block">
@@ -46,12 +46,16 @@ export const Header = () => {
                         variant="lg:hidden"
                         icon={isMenuOpen ? LuX : LuMenu}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        ariaLabel={isMenuOpen ? "Close menu" : "Open menu"}
+                        ariaExpanded={isMenuOpen}
+                        ariaControls="mobile-menu"
                     />
                 </div>
                 {isMenuOpen && (
                     <div
+                        id="mobile-menu"
                         onClick={() => setIsMenuOpen(false)}
-                        className="lg:hidden absolute top-full left-0 right-0 mt-2 p-6 rounded-3xl border border-white/20 shadow-2xl bg-coffee-200/30 flex flex-col gap-6"
+                        className="lg:hidden absolute top-full left-0 right-0 mt-2 p-6 rounded-3xl border border-white/20 shadow-2xl bg-coffee-100/95 backdrop-blur-lg flex flex-col gap-6"
                     >
                         {navLinks.map((link) => (
                             <NavItem key={link.to} to={link.to} content={link.label} />

@@ -1,18 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base{
-    body {
-        @apply bg-cream text-coffee-900 font-sans antialiased overflow-x-hidden;
-            background:
-            radial-gradient(circle at top left, rgba(230, 220, 207, 0.5), transparent 40%),
-            radial-gradient(circle at bottom right, rgba(209, 96, 61, 0.05), transparent 40%),
-            linear-gradient(135deg, #f5e6d3 0%, #e6c9a8 50%, #d7b899 100%);
-            min-height: 100vh;
-            position: relative;
-        }
-}
+
 @layer components {
+    body {
+    @apply bg-cream text-coffee-900 font-sans antialiased overflow-x-hidden;
+        background:
+        radial-gradient(circle at top left, rgba(230, 220, 207, 0.5), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(209, 96, 61, 0.05), transparent 40%),
+        linear-gradient(135deg, #f5e6d3 0%, #e6c9a8 50%, #d7b899 100%);
+        min-height: 100vh;
+        position: relative;
+    }
     .mainSection {
         @apply  w-full px-5 pt-40 flex flex-col justify-center items-center
     }
@@ -122,6 +121,6 @@
         @apply text-sm font-bold text-coffee-900 uppercase tracking-wide ml-2
     }
     .inputForm{
-        @apply w-full bg-white/40 text-base border border-white/30 rounded-xl py-4 pl-12 pr-4 text-base text-coffee-900 placeholder:text-coffee-400/70 focus:bg-white/70 focus:ring-2 focus:ring-primary focus:outline-none transition-all
+        @apply w-full bg-white/40 border border-white/30 rounded-xl py-4 pl-12 pr-4 text-base text-coffee-900 placeholder:text-coffee-400/70 focus:bg-white/70 focus:ring-2 focus:ring-primary focus:outline-none transition-all
     }
 }
