@@ -22,7 +22,7 @@ function CartCard({
     remove,
 }:CartCardProps) {
     return (
-       <div className="glass shadow-2xl p-4 rounded-xl flex gap-4 items-center w-96">
+       <div className="glass shadow-2xl p-4 rounded-xl flex gap-4 items-center w-96 max-w-full">
             <img alt={cart_name} className="w-20 h-20 rounded-lg object-cover" src={image} />
             <div className="flex-1 mr-5">
                 <h3 className="font-bold text-coffee-900">{cart_name}</h3>
