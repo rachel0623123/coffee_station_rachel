@@ -10,7 +10,7 @@ function TopSelling(){
     const addCartItem = useCoffeeStore((state) => state.addCartItem);
     const openCartFunc =  useCoffeeStore((state) => state.openCart);
     return (
-        <section id="top-selling" className="relative flex flex-col items-center justify-center pt-32 ">
+        <section id="top-selling" className="relative flex flex-col items-center justify-center pt-20 lg:pt-32 px-5 sm:px-8 lg:px-12">
             <div className="w-full max-w-[1536px] pb-20">
                 <div className="text-center mb-10 sm:mb-16">
                     <h2 className="sectionHeader">Our Best Sellers</h2>
