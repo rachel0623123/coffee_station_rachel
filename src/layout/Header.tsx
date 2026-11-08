@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IconButton from "../shared/ui/buttons/IconButton";
 import CountBadge from "../shared/ui/badges/CountBadge";
 import Button from "../shared/ui/buttons/Button";
@@ -17,29 +17,48 @@ import CartSideBar from "../shared/ui/CartSideBar";
 export const Header = () => {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const openCartFunc =  useCoffeeStore((state) => state.openCart);
+    const openCartFunc = useCoffeeStore((state) => state.openCart);
     const cartCount = useCoffeeStore((state) => state.cart.reduce((sum, item) => sum + item.quantity, 0));
+    useEffect(() => {
+        if (!isMenuOpen) return;
+
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setIsMenuOpen(false);
+        };
+        const mq = window.matchMedia("(min-width: 1024px)");
+        const onChange = (e: MediaQueryListEvent) => {
+            if (e.matches) setIsMenuOpen(false);
+        };
+
+        window.addEventListener("keydown", onKeyDown);
+        mq.addEventListener("change", onChange);
+        return () => {
+            window.removeEventListener("keydown", onKeyDown);
+            mq.removeEventListener("change", onChange);
+        };
+    }, [isMenuOpen]);
+
     return (
         <div>
             <nav className="navBar">
                 <Link className="flex items-center gap-1 text-xl sm:text-2xl font-bold text-coffee-900 tracking-tight shrink-0 z-20 font-serif group" to="/">
-                    <IconButton content="" variant="bg-coffee-900 text-white rounded-2xl" icon={LuCoffee}/>
+                    <IconButton content="" variant="bg-coffee-900 text-white rounded-2xl" icon={LuCoffee} />
                     <span>Coffee
                         <span className="text-coffee-600 font-normal italic">'station</span>
                     </span>
                 </Link>
                 <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-10">
                     {navLinks.map((link) => (
-                        <NavItem key = {link.to} to={link.to} content={link.label} />
+                        <NavItem key={link.to} to={link.to} content={link.label} />
                     ))}
                 </div>
                 <div className="flex items-center gap-3 sm:gap-6 z-20">
                     <div className="relative hover:scale-110 transition-transform duration-700 ease-out">
-                        <IconButton content="" variant="text-[15px] hover:bg-white/20" icon={FiShoppingBag} onClick={openCartFunc} ariaLabel="Open cart"/>
-                        {cartCount !== 0 && <CountBadge variant="absolute -top-1 left-4" count={String(cartCount)}/>}
+                        <IconButton content="" variant="text-[15px] hover:bg-white/20" icon={FiShoppingBag} onClick={openCartFunc} ariaLabel="Open cart" />
+                        {cartCount !== 0 && <CountBadge variant="absolute -top-1 left-4" count={String(cartCount)} />}
                     </div>
                     <div className="hidden lg:block">
-                        <Button content = "Reserve" variant ="orderBtn py-3 px-6 rounded-2xl text-sm tracking-widest" onClick = {() => navigate("/booking")}/>
+                        <Button content="Reserve" variant="orderBtn py-3 px-6 rounded-2xl text-sm tracking-widest" onClick={() => navigate("/booking")} />
                     </div>
                     <IconButton
                         content=""
