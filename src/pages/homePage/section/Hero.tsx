@@ -43,12 +43,12 @@ function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-20" onMouseMove={handleMouseMove}>
             <div className="mx-auto px-5 sm:px-10 lg:px-20 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl">
-                <motion.div style={{ y: y1 }} className="text-left space-y-8 relative z-20">
+                <motion.div style={{ y: y1 }} className="text-center lg:text-left space-y-8 relative z-20">
                     <motion.h1
                         variants={sentence}
                         initial="hidden"
                         animate="visible"
-                        className="text-5xl sm:text-6xl lg:text-8xl font-serif font-bold text-coffee-900">
+                        className="text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-coffee-900">
                         {"Sip the Extraordinary".split("").map((char, index) => (
                             <motion.span key={index} variants={letter}>
                                 {char}
@@ -59,11 +59,11 @@ function Hero() {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1, duration: 0.8 }}
-                        className="text-xl text-coffee-800/80 max-w-lg mx-0 font-medium">
+                        className="text-xl text-coffee-800/80 max-w-lg mx-auto mx-0 font-medium">
                         Experience coffee crafted with passion, served in liquid glass elegance. Warmth in every cup.
                     </motion.p>
                     <motion.div
-                        className="flex flex-wrap justify-center lg:justify-start gap-3"
+                        className="flex flex-wrap justify-center lg:justify-start gap-3 w-fit mx-auto lg:mx-0"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.05 }}
