@@ -29,12 +29,12 @@ function Booking() {
     }
     return (
         <main className="mainSection min-h-screen pb-10">
-            <div className="rounded-[40px] overflow-hidden shadow-2xl grid grid-cols-2 min-h-[600px] border border-white/20 max-w-6xl z-10">
-                <div className="p-12 flex flex-col justify-between overflow-hidden bg-coffee-900/5">
+            <div className="rounded-[40px] overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-2 min-h-[600px] border border-white/20 max-w-6xl z-10">
+                <div className="p-6 sm:p-10 lg:p-12 flex flex-col justify-between gap-8 overflow-hidden bg-coffee-900/5">
                     <div className="z-10 space-y-10">
                         <IconBadge content="Premium Experience" variant="glass" icon={LuSparkles} />
-                        <h1 className="text-5xl lg:text-6xl font-serif font-bold text-coffee-900 mb-4" >Reserve Your <br /><span className="text-primary italic">Moment</span></h1>
-                        <p className="text-lg text-coffee-800/80 max-w-md mt-8">Secure the best spot in the house. Whether for a quiet coffee or a lively brunch, we're ready for you.</p>
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-coffee-900 mb-4 text-center lg:text-left" >Reserve Your <br /><span className="text-primary italic">Moment</span></h1>
+                        <p className="text-lg text-coffee-800/80 max-w-md mt-8 text-center lg:text-left">Secure the best spot in the house. Whether for a quiet coffee or a lively brunch, we're ready for you.</p>
                     </div>
                     <div className="flex items-center gap-4 text-coffee-900 font-medium bg-white/30 p-4 rounded-2xl border border-white/10">
                         <LuClock4 className="p-3 w-10 h-10 bg-white/50 rounded-full flex items-center justify-center text-coffee-900" />
@@ -44,7 +44,7 @@ function Booking() {
                         </div>
                     </div>
                 </div>
-                <div className="p-12 bg-transparent border-t-0 border-white/10">
+                <div className="p-6 sm:p-10 lg:p-12 bg-transparent border-t-0 border-white/10">
                     {
                         isConfirmed ? 
                         (<div className="h-full flex flex-col items-center justify-center text-center gap-4">
@@ -66,7 +66,7 @@ function Booking() {
                                     <input type="text" id="name" placeholder="Example Name" className="inputForm" value={name} onChange={(e)=>setName(e.target.value)} required />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="flex flex-col space-y-2">
                                     <label htmlFor="date" className="labelText">Date</label>
                                     <div className="relative">
@@ -87,7 +87,7 @@ function Booking() {
                             </div>
                             <div className="flex flex-col space-y-2">
                                 <p className="labelText">Preferred time</p>
-                                <div className="grid grid-cols-3 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     {timeSlot.map((slot) => (
                                         <TimeSlot
                                             key={slot}
