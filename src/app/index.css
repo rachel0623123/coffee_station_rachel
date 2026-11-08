@@ -94,7 +94,7 @@
         @apply  w-[200px] h-[200px] rounded-full outline-white
     }
     .bigImgCard{
-        @apply  w-full max-w-[700px] h-[500px] rounded-3xl outline-white
+        @apply  w-full max-w-[700px] h-[320px] sm:h-[400px] lg:h-[500px] rounded-3xl outline-white mx-auto
     }
     .mapCard {
         @apply rounded-3xl outline-white
