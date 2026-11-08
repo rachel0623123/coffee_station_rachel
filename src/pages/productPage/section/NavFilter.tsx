@@ -25,7 +25,7 @@ function NavFilter({
                 <h2 className="pageHeader">Our Menu</h2>
                 <p className="sectionText">Explore our full range of handcrafted beverages and delicious treats.</p>
             </div>
-            <div className="p-1 bg-white/10 rounded-full border border-white/40 glass ">
+            <div className="flex flex-wrap justify-center p-1 bg-white/10 rounded-3xl md:rounded-full border border-white/40 glass">
                 {
                     categories.map((item) => (
                         <Chip key={item} content = {item} variant ={selectedCategory === item ? "selected": ""} onClick = {()=>onCategoryChange(item)}/>
