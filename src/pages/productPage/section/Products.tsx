@@ -15,7 +15,7 @@ function Products({selectedCategory} : ProductsProps){
             <div className="w-full max-w-[1536px] pb-20">
                 <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     { showCoffees.length == 0 ? (
-                        <p className="sectionText text-center">
+                        <p className="sectionText text-center col-span-full">
                             No items in {selectedCategory} yet. Check back soon!
                         </p>
                         ) : (
