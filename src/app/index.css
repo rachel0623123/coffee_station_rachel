@@ -26,9 +26,9 @@
       
     }
     .testimonialCard{
-        @apply p-6 w-96 h-60 rounded-[24px] relative border border-white/30 bg-white/10 transition-colors pointer-events-none select-none relative  font-sans shadow-2xl
+        @apply p-6 w-[85vw] max-w-96 min-h-60 rounded-[24px] relative border border-white/30 bg-white/10 transition-colors pointer-events-none select-none font-sans shadow-2xl
     }
-    .quateMark{
+    .quoteMark{
         @apply absolute -top-5 left-6 bg-coffee-800 rounded-full p-2.5  shadow-lg  text-white
     }
 
@@ -88,7 +88,7 @@
         @apply shrink-0 glass outline outline-8 shadow-xl relative overflow-hidden
     }
     .slideCard {
-        @apply  w-[350px]  h-[440px] rounded-2xl outline-white/20 hover:scale-110 transition-transform duration-700 ease-out shrink-0 glass outline outline-8 shadow-xl relative overflow-hidden rounded-2xl overflow-hidden
+        @apply  w-[280px] h-[352px] sm:w-[350px] sm:h-[440px] outline-white/20 hover:scale-110 transition-transform duration-700 ease-out shrink-0 glass outline outline-8 shadow-xl relative overflow-hidden rounded-2xl
     }
     .staffCard{
         @apply  w-[200px] h-[200px] rounded-full outline-white
@@ -109,7 +109,7 @@
         @apply text-coffee-950
     }
     .sectionHeader{
-        @apply text-6xl font-serif font-bold text-coffee-900
+        @apply text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-coffee-900
     }
     .sectionText{
         @apply text-coffee-800/80 max-w-2xl mx-auto text-base sm:text-lg font-medium

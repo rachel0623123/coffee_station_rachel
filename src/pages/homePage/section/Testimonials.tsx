@@ -21,10 +21,12 @@ function Testimonials(){
                 <Swiper
                     slidesPerView="auto"
                     spaceBetween={24}
+                    slidesOffsetBefore={20}
+                    slidesOffsetAfter={20}
                     className="py-8"
                 >
                     {testimonials.map((item, index) => (
-                    <SwiperSlide key={`${item.id}-${index}` } className="!w-auto !py-10 ml-5">
+                    <SwiperSlide key={`${item.id}-${index}` } className="!w-auto !py-10">
                         <TestimonialCard  quote={item.quote} name={item.name} role={item.role} avatar={item.avatar}/>
                     </SwiperSlide>
                     ))}
