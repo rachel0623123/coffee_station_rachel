@@ -30,7 +30,7 @@ function CartSideBar() {
     return (
         <div className="fixed top-0 right-0 z-50">
             <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40" onClick={closeCartFunc}></div>
-            <div className="fixed top-0 right-0 h-screen w-full max-w-md glass z-50 shadow-2xl flex flex-col border-l border-white/30 ">
+            <div className="fixed inset-y-0 right-0 w-full max-w-md glass z-50 shadow-2xl flex flex-col border-l border-white/30 ">
                 <div className="p-6 flex items-center justify-between border-b border-white/10 text-2xl font-serif font-bold">
                     <div className="flex gap-3 items-center">
                         <FiShoppingBag />
